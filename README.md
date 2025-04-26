@@ -15,13 +15,13 @@
 
 Ever stared at a Python exception and wondered what went wrong? ErrorTrace Pro transforms cryptic tracebacks into clear, actionable insights. With stunning visualizations, solution suggestions, and integrated cloud logging, it's the exception handler you've always wanted.
 
-## ✨ Features
+## Features
 
-- 🎨 **Visual Traceback Mapping**: Beautiful, colorful, and informative tracebacks that highlight exactly what went wrong
-- 💡 **Common Solution Database**: Intelligent suggestions to fix exceptions based on a comprehensive solutions library
-- ☁️ **Multi-Cloud Logging**: Seamlessly log exceptions to GCP, AWS, Azure, or custom HTTP endpoints
-- 🚀 **Drop-in Integration**: Works with any Python codebase with minimal configuration
-- 🛠️ **Powerful CLI**: Run scripts with enhanced error handling directly from the command line
+- **Visual Traceback Mapping**: Beautiful, colorful, and informative tracebacks that highlight exactly what went wrong
+- **Common Solution Database**: Intelligent suggestions to fix exceptions based on a comprehensive solutions library
+- **Multi-Cloud Logging**: Seamlessly log exceptions to GCP, AWS, Azure, or custom HTTP endpoints
+- **Drop-in Integration**: Works with any Python codebase with minimal configuration
+- **Powerful CLI**: Run scripts with enhanced error handling directly from the command line
 
 ## 📦 Installation
 
@@ -44,7 +44,7 @@ pip install errortrace-pro[cli]
 pip install errortrace-pro[all]
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Usage
 
@@ -90,7 +90,7 @@ errortrace_pro.install(handler)
 # Your code here
 ```
 
-## 🧰 Advanced Usage
+## Advanced Usage
 
 ### Running the CLI Tool
 
@@ -240,7 +240,7 @@ errortrace_pro.install(handler)
 1/0  # This will be logged to Azure Application Insights
 ```
 
-## 📚 API Reference
+## API Reference
 
 ### Core Functions
 
@@ -259,11 +259,11 @@ errortrace_pro.install(handler)
 | `errortrace_pro.solutions.SolutionProvider` | The solution provider class |
 | `errortrace_pro.cloud_logger.CloudLogger` | The cloud logging class |
 
-## 🤝 Contributing
+## Contributing
 
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## 📋 Roadmap
+## Roadmap
 
 - [ ] AI-powered solution suggestions
 - [ ] Integration with more IDEs and tools
@@ -271,11 +271,11 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 - [ ] Customizable visualization themes
 - [ ] Multi-language support
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - The [Rich](https://github.com/Textualize/rich) library for beautiful terminal formatting
 - The open-source Python community for inspiration and support
@@ -285,8 +285,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Made by Hamed Esam ❤️</p>
   <p>
-    <a href="https://github.com/Hamed233/">GitHub</a> •
-    <a href="https://pypi.org/project/errortrace-pro">PyPI</a> •
-    <a href="https://errortrace-pro.readthedocs.io">Documentation</a>
+    <a href="https://github.com/Hamed233/ErrorTrace-Pro">GitHub</a> •
+    <a href="https://pypi.org/project/errortrace-pro">PyPI</a>
   </p>
 </div>
