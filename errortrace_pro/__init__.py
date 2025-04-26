@@ -11,7 +11,7 @@ Compatible with Python 3.7+
 """
 
 __version__ = "0.1.0"
-__author__ = "ErrorTrace Pro Team"
+__author__ = "Hamed Esam"
 
 import logging
 import sys

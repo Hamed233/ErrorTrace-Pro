@@ -17,7 +17,7 @@ def test_http_endpoint():
     handler = errortrace_pro.init(
         cloud_logging=True,
         cloud_provider="http",
-        api_key="test-key",  # Can be any value for testing
+        api_key="test-key", 
         endpoint="https://httpbin.org/post"  # This is a test endpoint that echoes back what you send
     )
     

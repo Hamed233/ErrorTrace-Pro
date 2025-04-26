@@ -8,7 +8,7 @@ import errortrace_pro
 handler = errortrace_pro.init(
     cloud_logging=True,
     cloud_provider="http",
-    api_key="test-key",  # Can be any value for testing
+    api_key="test-key",  
     endpoint="https://httpbin.org/post"  # This test endpoint echoes back what you send
 )
 

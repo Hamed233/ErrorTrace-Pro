@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![ErrorTrace Pro Logo](https://raw.githubusercontent.com/errortrace-pro/errortrace-pro/main/docs/logo.svg)
-
 **Enhanced exception handling for Python with visual tracebacks, solution suggestions, and cloud logging.**
 
 [![Python versions](https://img.shields.io/badge/python-3.7%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -24,14 +22,6 @@ Ever stared at a Python exception and wondered what went wrong? ErrorTrace Pro t
 - ☁️ **Multi-Cloud Logging**: Seamlessly log exceptions to GCP, AWS, Azure, or custom HTTP endpoints
 - 🚀 **Drop-in Integration**: Works with any Python codebase with minimal configuration
 - 🛠️ **Powerful CLI**: Run scripts with enhanced error handling directly from the command line
-- 🌐 **Interactive Web Interface**: Debug exceptions in a user-friendly web environment
-
-## 📷 Screenshots
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/errortrace-pro/errortrace-pro/main/docs/console_output.png" alt="Console output" width="49%" />
-  <img src="https://raw.githubusercontent.com/errortrace-pro/errortrace-pro/main/docs/web_interface.png" alt="Web interface" width="49%" />
-</div>
 
 ## 📦 Installation
 
@@ -49,9 +39,6 @@ pip install errortrace-pro[rich]
 
 # Install with Click for better CLI experience
 pip install errortrace-pro[cli]
-
-# Install with Flask for the web interface
-pip install errortrace-pro[web]
 
 # Install all optional dependencies
 pip install errortrace-pro[all]
@@ -253,17 +240,6 @@ errortrace_pro.install(handler)
 1/0  # This will be logged to Azure Application Insights
 ```
 
-### Running the Web Interface
-
-ErrorTrace Pro includes a web interface for interactive error experimentation:
-
-```python
-from errortrace_pro.web import create_app
-
-app = create_app()
-app.run(host='0.0.0.0', port=5000, debug=True)
-```
-
 ## 📚 API Reference
 
 ### Core Functions
@@ -284,14 +260,6 @@ app.run(host='0.0.0.0', port=5000, debug=True)
 | `errortrace_pro.cloud_logger.CloudLogger` | The cloud logging class |
 
 ## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin feature/my-new-feature`
-5. Submit a pull request
 
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 

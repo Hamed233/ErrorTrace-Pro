@@ -138,3 +138,5 @@ dmypy.json
 
 # macOS
 .DS_Store
+
+build_and_publish.sh

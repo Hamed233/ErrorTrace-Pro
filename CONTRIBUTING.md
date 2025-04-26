@@ -38,12 +38,12 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ### Pull Requests
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+2. Create a feature branch (`git checkout -b feature/new-feature`)
 3. Make your changes
 4. Add tests if applicable
 5. Update documentation as needed
 6. Commit your changes using descriptive commit messages
-7. Push to your branch (`git push origin feature/amazing-feature`)
+7. Push to your branch (`git push origin feature/new-feature`)
 8. Open a Pull Request
 
 #### Pull Request Guidelines

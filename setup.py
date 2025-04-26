@@ -36,7 +36,6 @@ setup(
     extras_require={
         'rich': ['rich>=10.0.0'],
         'cli': ['click>=7.0.0'],
-        'web': ['flask>=2.0.0'],
         'all': [
             'rich>=10.0.0',
             'click>=7.0.0',
