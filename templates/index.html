@@ -16,9 +16,27 @@
         }
         .solution-item {
             margin-bottom: 10px;
-            padding: 8px;
-            border-left: 3px solid #0d6efd;
+            padding: 12px;
+            border-left: 4px solid #0d6efd;
+            background-color: rgba(13, 110, 253, 0.05);
+            transition: all 0.3s;
+            border-radius: 4px;
+            position: relative;
+        }
+        .solution-item:before {
+            content: "💡";
+            position: absolute;
+            left: -12px;
+            top: 8px;
+            background: #0d6efd;
+            padding: 0 5px;
+            border-radius: 50%;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .solution-item:hover {
             background-color: rgba(13, 110, 253, 0.1);
+            transform: translateX(5px);
         }
         .error-type {
             color: #dc3545;
@@ -28,12 +46,38 @@
             font-family: 'Courier New', Courier, monospace;
             white-space: pre-wrap;
             word-wrap: break-word;
-            background-color: #2b2b2b;
+            background-color: #1e1e1e;
             color: #f8f9fa;
             padding: 15px;
             border-radius: 5px;
             margin: 15px 0;
             overflow-x: auto;
+            border-left: 4px solid #dc3545;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+        }
+        
+        /* Syntax highlighting for traceback */
+        .error-traceback .file-path {
+            color: #569cd6;
+            font-weight: bold;
+        }
+        .error-traceback .line-number {
+            color: #b5cea8;
+        }
+        .error-traceback .function-name {
+            color: #dcdcaa;
+        }
+        .error-traceback .error-line {
+            color: #ce9178;
+            font-weight: bold;
+            background-color: rgba(255, 0, 0, 0.1);
+            display: block;
+            margin: 5px 0;
+            padding: 2px 5px;
+        }
+        .error-traceback .error-arrow {
+            color: #ff5555;
         }
         .solution-heading {
             color: #0d6efd;
@@ -293,20 +337,66 @@ errortrace_pro.install()</code></pre>
                         errorTitle.textContent = data.error_type;
                         errorMessage.textContent = data.error_message;
                         
-                        // Handle traceback (try to preserve formatting)
-                        errorTraceback.innerHTML = data.traceback.replace(/\n/g, '<br>');
+                        // Process traceback for syntax highlighting
+                        let tracebackHtml = data.traceback;
+                        
+                        // Replace file paths with highlighted spans
+                        tracebackHtml = tracebackHtml.replace(/File "([^"]+)"/g, 'File "<span class="file-path">$1</span>"');
+                        
+                        // Replace line numbers
+                        tracebackHtml = tracebackHtml.replace(/line (\d+)/g, 'line <span class="line-number">$1</span>');
+                        
+                        // Replace function names
+                        tracebackHtml = tracebackHtml.replace(/in ([^\n]+)/g, 'in <span class="function-name">$1</span>');
+                        
+                        // Highlight error lines (lines with code)
+                        tracebackHtml = tracebackHtml.replace(/^(\s*)(\w+.*\n)/gm, '$1<span class="error-line">$2</span>');
+                        
+                        // Replace arrows
+                        tracebackHtml = tracebackHtml.replace(/(-&gt;|→)/g, '<span class="error-arrow">→</span>');
+                        
+                        // Replace newlines with <br>
+                        tracebackHtml = tracebackHtml.replace(/\n/g, '<br>');
+                        
+                        // Add the highlighted traceback to the DOM
+                        errorTraceback.innerHTML = tracebackHtml;
                         
                         // Check if solutions exist
                         if (data.solutions && data.solutions.length > 0) {
                             solutionsCard.style.display = 'block';
                             solutionsList.innerHTML = '';
                             
-                            // Add solutions to list
+                            // Add solutions to list with animation
                             data.solutions.forEach((solution, index) => {
                                 const li = document.createElement('li');
                                 li.classList.add('list-group-item', 'solution-item');
-                                li.textContent = solution;
-                                solutionsList.appendChild(li);
+                                
+                                // Create solution number badge
+                                const badge = document.createElement('span');
+                                badge.classList.add('badge', 'rounded-pill', 'bg-primary', 'me-2');
+                                badge.textContent = index + 1;
+                                
+                                // Add solution text with highlight for keywords
+                                const solutionText = document.createElement('span');
+                                // Highlight important keywords
+                                const highlightedText = solution
+                                    .replace(/\b(check|ensure|verify|use|add|try|consider|avoid)\b/gi, '<strong class="text-primary">$1</strong>')
+                                    .replace(/\b(error|exception|warning|missing|invalid|null|undefined)\b/gi, '<span class="text-danger">$1</span>');
+                                solutionText.innerHTML = highlightedText;
+                                
+                                // Add badge and text to the list item
+                                li.appendChild(badge);
+                                li.appendChild(solutionText);
+                                
+                                // Add with delay for animation effect
+                                setTimeout(() => {
+                                    solutionsList.appendChild(li);
+                                    li.style.opacity = '0';
+                                    setTimeout(() => {
+                                        li.style.transition = 'opacity 0.5s, transform 0.5s';
+                                        li.style.opacity = '1';
+                                    }, 50);
+                                }, index * 100);
                             });
                         } else {
                             solutionsCard.style.display = 'none';

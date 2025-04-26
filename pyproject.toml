@@ -27,6 +27,7 @@ classifiers = [
 keywords = ["exception", "traceback", "debugging", "error handling", "cloud logging"]
 dependencies = [
     "colorama>=0.4.4",
+    "rich>=13.8.1",
 ]
 
 [project.optional-dependencies]

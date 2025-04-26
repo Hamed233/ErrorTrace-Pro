@@ -1,0 +1,15 @@
+colorama>=0.4.4
+rich>=13.8.1
+
+[all]
+rich>=10.0.0
+click>=7.0.0
+
+[cli]
+click>=7.0.0
+
+[rich]
+rich>=10.0.0
+
+[web]
+flask>=2.0.0
