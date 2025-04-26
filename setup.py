@@ -36,9 +36,19 @@ setup(
     extras_require={
         'rich': ['rich>=10.0.0'],
         'cli': ['click>=7.0.0'],
+        'web': ['flask>=2.0.0'],
         'all': [
             'rich>=10.0.0',
             'click>=7.0.0',
+            'flask>=2.0.0',
+        ],
+        'dev': [
+            'pytest>=7.0.0',
+            'black>=23.0.0',
+            'flake8>=6.0.0',
+            'isort>=5.0.0',
+            'build>=0.10.0',
+            'twine>=4.0.0',
         ],
     },
     classifiers=[
