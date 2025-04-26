@@ -24,14 +24,6 @@ Ever stared at a Python exception and wondered what went wrong? ErrorTrace Pro t
 - ☁️ **Multi-Cloud Logging**: Seamlessly log exceptions to GCP, AWS, Azure, or custom HTTP endpoints
 - 🚀 **Drop-in Integration**: Works with any Python codebase with minimal configuration
 - 🛠️ **Powerful CLI**: Run scripts with enhanced error handling directly from the command line
-- 🌐 **Interactive Web Interface**: Debug exceptions in a user-friendly web environment
-
-## 📷 Screenshots
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/errortrace-pro/errortrace-pro/main/docs/console_output.png" alt="Console output" width="49%" />
-  <img src="https://raw.githubusercontent.com/errortrace-pro/errortrace-pro/main/docs/web_interface.png" alt="Web interface" width="49%" />
-</div>
 
 ## 📦 Installation
 
@@ -50,14 +42,11 @@ pip install errortrace-pro[rich]
 # Install with Click for better CLI experience
 pip install errortrace-pro[cli]
 
-# Install with Flask for the web interface
-pip install errortrace-pro[web]
-
 # Install all optional dependencies
 pip install errortrace-pro[all]
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Usage
 
@@ -168,102 +157,6 @@ os.environ["ERRORTRACE_API_KEY"] = "your-api-key"
 os.environ["ERRORTRACE_PROJECT_ID"] = "your-project-id"
 ```
 
-### Testing Cloud Logging
-
-#### Using a Generic HTTP Endpoint
-
-The easiest way to test cloud logging without setting up actual cloud accounts:
-
-```python
-import errortrace_pro
-
-# Initialize with HTTP endpoint logging
-handler = errortrace_pro.init(
-    cloud_logging=True,
-    cloud_provider="http",
-    api_key="test-key",  # Can be any value for testing
-    endpoint="https://httpbin.org/post"  # This is a test endpoint that echoes back what you send
-)
-
-# Install the handler
-errortrace_pro.install(handler)
-
-# Generate an exception to test
-def cause_error():
-    # This will cause a ZeroDivisionError
-    return 1/0
-
-try:
-    cause_error()
-except Exception:
-    pass  # The handler will log the exception
-```
-
-#### Testing with Google Cloud (GCP)
-
-```python
-import os
-# Set environment variables
-os.environ["ERRORTRACE_PROVIDER"] = "gcp"
-os.environ["ERRORTRACE_API_KEY"] = "your-gcp-api-key"
-os.environ["ERRORTRACE_PROJECT_ID"] = "your-gcp-project-id"
-
-# Initialize ErrorTrace Pro
-import errortrace_pro
-handler = errortrace_pro.init(cloud_logging=True)
-errortrace_pro.install(handler)
-
-# Cause an error
-1/0  # This will be logged to GCP
-```
-
-#### Testing with AWS CloudWatch
-
-```python
-import os
-# Set environment variables
-os.environ["ERRORTRACE_PROVIDER"] = "aws"
-os.environ["ERRORTRACE_API_KEY"] = "your-aws-access-key-id"
-os.environ["ERRORTRACE_SECRET_KEY"] = "your-aws-secret-access-key"
-os.environ["ERRORTRACE_REGION"] = "us-east-1"  # Or your preferred region
-
-# Initialize ErrorTrace Pro
-import errortrace_pro
-handler = errortrace_pro.init(cloud_logging=True)
-errortrace_pro.install(handler)
-
-# Cause an error
-1/0  # This will be logged to AWS CloudWatch
-```
-
-#### Testing with Azure Application Insights
-
-```python
-import os
-# Set environment variables
-os.environ["ERRORTRACE_PROVIDER"] = "azure"
-os.environ["ERRORTRACE_API_KEY"] = "your-azure-instrumentation-key"
-
-# Initialize ErrorTrace Pro
-import errortrace_pro
-handler = errortrace_pro.init(cloud_logging=True)
-errortrace_pro.install(handler)
-
-# Cause an error
-1/0  # This will be logged to Azure Application Insights
-```
-
-### Running the Web Interface
-
-ErrorTrace Pro includes a web interface for interactive error experimentation:
-
-```python
-from errortrace_pro.web import create_app
-
-app = create_app()
-app.run(host='0.0.0.0', port=5000, debug=True)
-```
-
 ## 📚 API Reference
 
 ### Core Functions
@@ -284,14 +177,6 @@ app.run(host='0.0.0.0', port=5000, debug=True)
 | `errortrace_pro.cloud_logger.CloudLogger` | The cloud logging class |
 
 ## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin feature/my-new-feature`
-5. Submit a pull request
 
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 

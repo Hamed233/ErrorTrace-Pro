@@ -3,7 +3,7 @@ name = "errortrace-pro"
 version = "0.1.0"
 description = "Enhanced exception handling for Python with visual tracebacks, solution suggestions, and cloud logging"
 authors = [
-    {name = "ErrorTrace Pro Team", email = "errortrace@example.com"},
+    {name = "Hamed Esam", email = "h.esam@example.com"},
 ]
 readme = "README.md"
 requires-python = ">=3.7"
@@ -49,8 +49,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/errortrace-pro/errortrace-pro"
-Issues = "https://github.com/errortrace-pro/errortrace-pro/issues"
+Homepage = "https://github.com/Hamed233/ErrorTrace-Pro"
+Issues = "https://github.com/Hamed233/ErrorTrace-Pro/issues"
 
 [project.scripts]
 errortrace = "errortrace_pro.cli:main"

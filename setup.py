@@ -17,9 +17,9 @@ setup(
     description='Enhanced exception handling with visual tracebacks, solution suggestions, and cloud logging',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    author='ErrorTrace Pro Team',
-    author_email='errortrace@example.com',
-    url='https://github.com/errortrace-pro/errortrace-pro',
+    author='Hamed Esam',
+    author_email='h.esam@example.com',
+    url='https://github.com/Hamed233/ErrorTrace-Pro',
     packages=find_packages(),
     include_package_data=True,
     package_data={
