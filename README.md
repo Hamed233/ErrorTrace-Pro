@@ -23,7 +23,7 @@ Ever stared at a Python exception and wondered what went wrong? ErrorTrace Pro t
 - **Drop-in Integration**: Works with any Python codebase with minimal configuration
 - **Powerful CLI**: Run scripts with enhanced error handling directly from the command line
 
-## 📦 Installation
+## Installation
 
 ```bash
 pip install errortrace-pro
