@@ -1,0 +1,109 @@
+{
+  "SyntaxError": [
+    "Check for missing parentheses, brackets, or quotes",
+    "Ensure proper indentation is used",
+    "Look for missing colons after conditional statements or loops",
+    "Verify correct use of equals (=) vs. comparison (==)"
+  ],
+  "IndentationError": [
+    "Check for consistent indentation (spaces vs tabs)",
+    "Ensure each code block is indented with the same pattern",
+    "Look for mixed tabs and spaces"
+  ],
+  "NameError": [
+    "Check if the variable is defined before usage",
+    "Verify variable name spelling",
+    "Make sure the variable is in scope",
+    "Check for case sensitivity issues"
+  ],
+  "TypeError": [
+    "Ensure you're using compatible types in operations",
+    "Check argument types passed to functions",
+    "Verify that you're not treating a non-callable as a function",
+    "Use type conversion functions like int(), str(), list() if needed"
+  ],
+  "ValueError": [
+    "Check if the value is appropriate for the operation (e.g., converting 'abc' to int)",
+    "Ensure values are within valid ranges for functions",
+    "Verify format strings match the values being formatted"
+  ],
+  "AttributeError": [
+    "Check if the object has the attribute or method you're trying to access",
+    "Verify object type before accessing attributes",
+    "Check for typos in attribute names",
+    "Ensure the module or package is properly imported"
+  ],
+  "ImportError": [
+    "Verify the module name is correct",
+    "Check if the module is installed (pip install module_name)",
+    "Ensure the package is in the Python path",
+    "Check for circular imports"
+  ],
+  "KeyError": [
+    "Ensure the key exists in the dictionary before accessing it",
+    "Use dict.get(key, default) to provide a default value",
+    "Check for case sensitivity or typos in key names"
+  ],
+  "IndexError": [
+    "Check that the index is within the valid range of the sequence",
+    "Verify the sequence is not empty before accessing elements",
+    "Use bounds checking with if len(list) > index before accessing"
+  ],
+  "FileNotFoundError": [
+    "Verify the file path is correct",
+    "Check if the file exists in the expected location",
+    "Ensure proper permissions to access the file",
+    "Use absolute paths instead of relative paths if needed"
+  ],
+  "ZeroDivisionError": [
+    "Add a check to prevent division by zero",
+    "Use a try-except block to handle the case",
+    "Consider using float('inf') for certain use cases"
+  ],
+  "PermissionError": [
+    "Check if the application has proper permissions",
+    "Verify file access rights",
+    "Run the application with elevated permissions if needed",
+    "Check if the file is locked by another process"
+  ],
+  "RuntimeError": [
+    "Check for recursive function calls without a proper exit condition",
+    "Look for issues with threads or concurrent execution",
+    "Review custom exception handling"
+  ],
+  "MemoryError": [
+    "Reduce memory usage by processing data in smaller chunks",
+    "Check for memory leaks in long-running loops",
+    "Consider using generators instead of lists for large data sets",
+    "Use more efficient data structures"
+  ],
+  "RecursionError": [
+    "Ensure your recursive function has a proper base case",
+    "Consider rewriting using iteration instead of recursion",
+    "Check for unintended recursive calls"
+  ],
+  "ConnectionError": [
+    "Verify network connectivity",
+    "Check if the server is accessible",
+    "Ensure proper URL/IP and port configuration",
+    "Add retry logic with exponential backoff"
+  ],
+  "TimeoutError": [
+    "Increase timeout duration",
+    "Check server or service responsiveness",
+    "Consider implementing circuit breaker pattern",
+    "Add retry logic with backoff"
+  ],
+  "JSONDecodeError": [
+    "Verify the JSON format is valid (use a JSON validator)",
+    "Check for missing quotes, commas, or brackets",
+    "Ensure the content is actually JSON data",
+    "Print the raw response to inspect issues"
+  ],
+  "ModuleNotFoundError": [
+    "Install the module with pip: pip install <module_name>",
+    "Check the module name for typos",
+    "Verify your Python environment has the required packages",
+    "Check if the module is compatible with your Python version"
+  ]
+}
