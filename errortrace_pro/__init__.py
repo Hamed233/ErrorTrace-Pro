@@ -10,7 +10,7 @@ A professional-grade exception handling library featuring:
 Compatible with Python 3.7+
 """
 
-__version__ = "0.1.0"
+__version__ = "0.3.0"
 __author__ = "Hamed Esam"
 
 import logging
@@ -72,9 +72,20 @@ def install(handler=None):
         handler = default_handler
     
     def exception_hook(exc_type, exc_value, exc_traceback):
+        # Handle the exception with our custom handler
         handler.handle(exc_type, exc_value, exc_traceback)
-        # Call the original exception hook to maintain default behavior
-        sys.__excepthook__(exc_type, exc_value, exc_traceback)
+        # We don't call the original excepthook to avoid duplicate tracebacks
+        # We also need to exit with a non-zero status code to indicate an error occurred
+        # but without re-raising the exception
+        if exc_type is not None:
+            # If this is running in a script, exit with error code 1
+            # This prevents the default traceback from showing
+            import os
+            # Only exit if this is the main thread and not in interactive mode
+            if os._exit and not hasattr(sys, 'ps1'):
+                # Use os._exit instead of sys.exit to avoid triggering exit handlers
+                # which might cause more exceptions
+                os._exit(1)
     
     # Set as the global exception hook
     sys.excepthook = exception_hook

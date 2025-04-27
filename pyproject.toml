@@ -1,9 +1,9 @@
 [project]
 name = "errortrace-pro"
-version = "0.1.0"
+version = "0.3.0"
 description = "Enhanced exception handling for Python with visual tracebacks, solution suggestions, and cloud logging"
 authors = [
-    {name = "Hamed Esam", email = "h.esam@example.com"},
+    {name = "Hamed Esam", email = "info@hamedesam.info"},
 ]
 readme = "README.md"
 requires-python = ">=3.7"

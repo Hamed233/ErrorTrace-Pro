@@ -1,10 +1,10 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.1
 Name: errortrace-pro
-Version: 0.1.0
+Version: 0.2.0
 Summary: Enhanced exception handling for Python with visual tracebacks, solution suggestions, and cloud logging
 Home-page: https://github.com/Hamed233/ErrorTrace-Pro
 Author: Hamed Esam
-Author-email: Hamed Esam <h.esam@example.com>
+Author-email: Hamed Esam <info@hamedesam.info>
 License: MIT
 Project-URL: Homepage, https://github.com/Hamed233/ErrorTrace-Pro
 Project-URL: Issues, https://github.com/Hamed233/ErrorTrace-Pro/issues
@@ -43,10 +43,6 @@ Requires-Dist: flake8>=6.0.0; extra == "dev"
 Requires-Dist: isort>=5.0.0; extra == "dev"
 Requires-Dist: build>=0.10.0; extra == "dev"
 Requires-Dist: twine>=4.0.0; extra == "dev"
-Dynamic: author
-Dynamic: home-page
-Dynamic: license-file
-Dynamic: requires-python
 
 # 🔍 ErrorTrace Pro
 
@@ -55,7 +51,7 @@ Dynamic: requires-python
 **Enhanced exception handling for Python with visual tracebacks, solution suggestions, and cloud logging.**
 
 [![Python versions](https://img.shields.io/badge/python-3.7%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![PyPI version](https://img.shields.io/badge/pypi-v0.1.0-blue?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/errortrace-pro/)
+[![PyPI version](https://img.shields.io/badge/pypi-v0.2.0-blue?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/errortrace-pro/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/status-beta-orange?style=for-the-badge)](https://github.com/Hamed233/ErrorTrace-Pro)
 
@@ -65,15 +61,15 @@ Dynamic: requires-python
 
 Ever stared at a Python exception and wondered what went wrong? ErrorTrace Pro transforms cryptic tracebacks into clear, actionable insights. With stunning visualizations, solution suggestions, and integrated cloud logging, it's the exception handler you've always wanted.
 
-## ✨ Features
+## Features
 
-- 🎨 **Visual Traceback Mapping**: Beautiful, colorful, and informative tracebacks that highlight exactly what went wrong
-- 💡 **Common Solution Database**: Intelligent suggestions to fix exceptions based on a comprehensive solutions library
-- ☁️ **Multi-Cloud Logging**: Seamlessly log exceptions to GCP, AWS, Azure, or custom HTTP endpoints
-- 🚀 **Drop-in Integration**: Works with any Python codebase with minimal configuration
-- 🛠️ **Powerful CLI**: Run scripts with enhanced error handling directly from the command line
+- **Visual Traceback Mapping**: Beautiful, colorful, and informative tracebacks that highlight exactly what went wrong
+- **Common Solution Database**: Intelligent suggestions to fix exceptions based on a comprehensive solutions library
+- **Multi-Cloud Logging**: Seamlessly log exceptions to GCP, AWS, Azure, or custom HTTP endpoints
+- **Drop-in Integration**: Works with any Python codebase with minimal configuration
+- **Powerful CLI**: Run scripts with enhanced error handling directly from the command line
 
-## 📦 Installation
+## Installation
 
 ```bash
 pip install errortrace-pro
@@ -94,7 +90,7 @@ pip install errortrace-pro[cli]
 pip install errortrace-pro[all]
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Usage
 
@@ -140,7 +136,7 @@ errortrace_pro.install(handler)
 # Your code here
 ```
 
-## 🧰 Advanced Usage
+## Advanced Usage
 
 ### Running the CLI Tool
 
@@ -290,7 +286,7 @@ errortrace_pro.install(handler)
 1/0  # This will be logged to Azure Application Insights
 ```
 
-## 📚 API Reference
+## API Reference
 
 ### Core Functions
 
@@ -309,11 +305,11 @@ errortrace_pro.install(handler)
 | `errortrace_pro.solutions.SolutionProvider` | The solution provider class |
 | `errortrace_pro.cloud_logger.CloudLogger` | The cloud logging class |
 
-## 🤝 Contributing
+## Contributing
 
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## 📋 Roadmap
+## Roadmap
 
 - [ ] AI-powered solution suggestions
 - [ ] Integration with more IDEs and tools
@@ -321,11 +317,11 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 - [ ] Customizable visualization themes
 - [ ] Multi-language support
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - The [Rich](https://github.com/Textualize/rich) library for beautiful terminal formatting
 - The open-source Python community for inspiration and support
@@ -335,8 +331,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Made by Hamed Esam ❤️</p>
   <p>
-    <a href="https://github.com/Hamed233/">GitHub</a> •
-    <a href="https://pypi.org/project/errortrace-pro">PyPI</a> •
-    <a href="https://errortrace-pro.readthedocs.io">Documentation</a>
+    <a href="https://github.com/Hamed233/ErrorTrace-Pro">GitHub</a> •
+    <a href="https://pypi.org/project/errortrace-pro">PyPI</a>
   </p>
 </div>

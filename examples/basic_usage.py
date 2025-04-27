@@ -56,7 +56,7 @@ def main():
         print("\n[Example 2: KeyError]")
         print("Attempting to access a non-existent dictionary key...\n")
         # This will be caught by ErrorTrace Pro
-        data = {'name': 'ErrorTrace Pro', 'version': '0.1.0'}
+        data = {'name': 'ErrorTrace Pro', 'version': '0.3.0'}
         process_data(data)
         
     elif choice == '3':

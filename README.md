@@ -4,8 +4,10 @@
 
 **Enhanced exception handling for Python with visual tracebacks, solution suggestions, and cloud logging.**
 
+<img src="Screenshot.png" alt="ErrorTrace Pro Thumbnail" width="600"/>
+
 [![Python versions](https://img.shields.io/badge/python-3.7%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![PyPI version](https://img.shields.io/badge/pypi-v0.1.0-blue?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/errortrace-pro/)
+[![PyPI version](https://img.shields.io/badge/pypi-v0.3.0-blue?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/errortrace-pro/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/status-beta-orange?style=for-the-badge)](https://github.com/Hamed233/ErrorTrace-Pro)
 

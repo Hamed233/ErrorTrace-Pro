@@ -5,7 +5,7 @@ import re
 # Read the content of __init__.py to get the version
 with open(os.path.join('errortrace_pro', '__init__.py'), 'r', encoding='utf-8') as f:
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", f.read(), re.M)
-    version = version_match.group(1) if version_match else '0.1.0'
+    version = version_match.group(1) if version_match else '0.3.0'
 
 # Read the content of README.md
 with open('README.md', 'r', encoding='utf-8') as f:

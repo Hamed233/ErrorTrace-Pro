@@ -92,8 +92,11 @@ class ExceptionHandler:
         # Generate error context
         context = self._get_error_context(exc_type, exc_value, exc_traceback)
         
+        # Check if handler is already installed (sys.excepthook is not the default)
+        is_installed = sys.excepthook is not sys.__excepthook__
+        
         # Visualize the traceback
-        visual_traceback = self.visualizer.format_traceback(exc_type, exc_value, exc_traceback)
+        visual_traceback = self.visualizer.format_traceback(exc_type, exc_value, exc_traceback, show_tip=not is_installed)
         
         # Print the visual traceback
         print(visual_traceback, file=sys.stderr)
